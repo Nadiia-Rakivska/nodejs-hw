@@ -14,7 +14,7 @@ const PORT = process.env.PORT ?? 3000;
 app.use(logger);
 
 app.use(
-  express.json({ type: ['application/json', 'application/vnd.api+json'] }), json()
+  express.json({ type: ['application/json', 'application/vnd.api+json'] })
 );
 
 app.use(cors());
