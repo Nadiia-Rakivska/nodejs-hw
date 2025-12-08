@@ -7,15 +7,15 @@ const validateObjectId = (value, helpers) => {
   const isValid = isValidObjectId(value);
 
   if (!isValid) {
-    return helpers.error('notetId.invalid');
+    return helpers.error('noteId.invalid');
   }
   return value;
 };
 
 export const noteIdSchema = {
   [Segments.PARAMS]: Joi.object({
-    notetId: Joi.string().required().custom(validateObjectId).messages({
-      'notetId.invalid': '"{#value}" must be a valid mongo id!',
+    noteId: Joi.string().required().custom(validateObjectId).messages({
+      'noteId.invalid': '{{#value}} must be a valid mongo id!',
     }),
   }),
 };
